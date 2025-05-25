@@ -1,1 +1,1 @@
-You Enterd Number : -121 is Palindrome Number
+GCD Of : 11 and 13 is : 1
