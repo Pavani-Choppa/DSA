@@ -9,7 +9,7 @@ int main(){
     int m,n;
     int gcd = 1;
     cin>>m>>n;
-    for(int i =1; i <= min(m,n); i++){
+    for(int i = 1; i <= min(m,n); i++){
         if(m % i == 0 && n % i == 0){
             gcd = i;
         }
