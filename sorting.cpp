@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// void selection_sort(int arr[], int n){
+// void selection_sort(vector<int>& arr, int n){
 //     for(int i = 0; i < n-1; i++)
 //     {
 //         int min = i;
@@ -21,38 +21,58 @@ using namespace std;
 //     }
 // }
 
-void bubble_sort(int arr[],int n)
+// void bubble_sort(vector<int>& arr, int n)
+// {
+//     // int n = arr.size();
+//     for(int i = n-1; i >= 0; i--){
+//         for(int j = 0; j < i; j++){
+//             if(arr[j] > arr[j+1])
+//                 swap(arr[j], arr[j+1]);
+//         }
+//     }
+
+//     cout << "\nAfter bubble sort the sorted array is:\n";
+//     for(int i = 0; i < n; i++)
+//         cout << arr[i] << " ";
+//     cout << endl;
+// }
+
+
+void insertion_sort(vector<int> & arr, int n)
 {
-    for(int i = n-1; i >= 0; i++){
-        for(int j = 0; j < i; j++){
-            if(arr[j] > arr[j+1])
-            {
-                int temp = arr[j+1];
-                arr[j+1] = arr[j];
-                arr[j] = temp;
-            }
+    for(int i = 0; i <= n-1; i++)
+    {
+        int j = i;
+        while(j > 0 && arr[j - 1] > arr[j]){
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+            j--;
         }
     }
-    cout<<endl<<"After bubble sort the sorted  array is : "<<endl;
-    for(int i = 0; i < n; i++){
+    cout<<endl<<"The array after Insertion Sorting is : "<<endl;
+    for(int i = 0; i < n; i++)
+    {
         cout<<arr[i]<<" ";
     }
 }
 
 int main(){
-    
     int n;
-    // cout<<"Enter the number of elements into array : ";
-    cin>>n;
-    int arr[n];
-    for(int i = 0; i  < n; i++){
-        cin>>arr[i];
-    }
-    cout<<"The original array is : "<<endl;
-    for(int i = 0; i < n; i++){
-        cout<<arr[i]<<" ";
-    }
+    cin >> n;
+    vector<int> arr(n);
+    for(int i = 0; i  < n; i++)
+        cin >> arr[i];
+
+    cout << "The original array is:\n";
+    for(int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
     // selection_sort(arr,n);
-    bubble_sort(arr,n);
+    // bubble_sort(arr,n);
+    insertion_sort(arr,n);
     return 0;
 }
+    
+    
+    
