@@ -139,18 +139,51 @@ using namespace std;
 
 /*Recursive bubble sort*/
 
-    void recursive_insertion_sort(vector<int> & arr,int i,int n)
+    // void recursive_insertion_sort(vector<int> & arr,int i,int n)
+    // {
+    //     if(i == n) return;
+    //     int j = i;
+    //     while(j > 0 && arr[j-1] > arr[j])
+    //     {
+    //         int temp = arr[j - 1];
+    //         arr[j - 1] = arr[j];
+    //         arr[j] = temp;
+    //         j--;
+    //     }
+    //     recursive_insertion_sort(arr,i + 1,n);
+    // }
+/*Quick Sort*/
+
+    
+    int partition(vector<int> &arr, int low, int high)
     {
-        if(i == n) return;
-        int j = i;
-        while(j > 0 && arr[j-1] > arr[j])
+        int pivot = arr[low];
+        int i = low + 1;
+        int j = high;
+
+        while (i <= j)
         {
-            int temp = arr[j - 1];
-            arr[j - 1] = arr[j];
-            arr[j] = temp;
-            j--;
+            while (i <= high && arr[i] <= pivot)
+                i++;
+            while (j >= low && arr[j] > pivot)
+                j--;
+
+            if (i < j)
+                swap(arr[i], arr[j]);
         }
-        recursive_insertion_sort(arr,i + 1,n);
+
+        swap(arr[low], arr[j]);
+        return j;
+    }
+
+    void quick_sort(vector<int> &arr, int low, int high)
+    {
+        if (low < high)
+        {
+            int pivot = partition(arr, low, high);
+            quick_sort(arr, low, pivot - 1);
+            quick_sort(arr, pivot + 1, high);
+        }
     }
 
 
@@ -175,7 +208,8 @@ int main(){
     // insertion_sort(arr,n);
     // merge_sort(arr,0,n-1);
     // recursive_bubble_sort(arr,n);
-    recursive_insertion_sort(arr, 0, n);
+    // recursive_insertion_sort(arr, 0, n);
+    quick_sort(arr, 0, n-1);
 
     cout<<endl<<"The array after Sorting is : "<<endl;
     for(int i = 0; i < n; i++)
