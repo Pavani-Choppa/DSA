@@ -1,5 +1,4 @@
-The original array is:
-8 3 4 5 6 1 2 
-
-The array after Sorting is : 
-1 2 3 4 5 6 8 
+The max element from the given array is : 
+8
+The max element from the given array is : 
+90
