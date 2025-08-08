@@ -1,4 +1,1 @@
-The max element from the given array is : 
-8
-The max element from the given array is : 
-90
+Array is NOT sorted
