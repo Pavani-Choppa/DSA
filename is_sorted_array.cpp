@@ -4,7 +4,10 @@ using namespace std;
 
 bool isArraySorted(int arr[], int n)
 {
-    /*BruteForce Method*/
+    /* BruteForce Method 
+        Time Complexity : O(N ^ 2)
+    */
+    
     // for (int i = 0; i < n; i++) 
     // {
     //     for (int j = i + 1; j < n; j++) 
@@ -18,7 +21,9 @@ bool isArraySorted(int arr[], int n)
 
     
 
-    /*Optimal mehod*/
+    /* Optimal mehod
+        Time Complexity : O(N)
+    */
 
     for(int i = 1; i < n; i++)
     {

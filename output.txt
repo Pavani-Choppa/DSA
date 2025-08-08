@@ -1,1 +1,1 @@
-Array is NOT sorted
+The Element is placed at position  : 1
