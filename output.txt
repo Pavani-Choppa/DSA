@@ -1,2 +1,2 @@
-Second smallest number is  :2
-Second Largest number is  :4
+The array after removing Duplicates : 
+1 3 2 
