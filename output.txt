@@ -1,1 +1,2 @@
-The Element is placed at position  : 1
+Second smallest number is  :2
+Second Largest number is  :4
