@@ -1,4 +1,4 @@
 The Original Array is : 
-1 2 3 4 5 
-The Array after performing the left rotation : 
-2 3 4 5 1 
+1 0 2 3 0 4 5 
+The  Array After shifting Zeeros into end of the array  is : 
+1 2 3 4 5 0 0 
