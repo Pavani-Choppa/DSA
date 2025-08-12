@@ -3,21 +3,40 @@ using namespace std;
 
 int findingMissingValue(vector<int> &arr, int n)
 {
-    for(int i = 1; i <= n ; i++)
-    {
-        int flag = 0;
-        for(int j =0; j < n-1; j++)
-        {
-            if(arr[j] == i)
-            {
-                flag = 1;
-                break;
-            }
-        }
-        if(flag == 0) return i;
+    /*
+        Bruteforce Approach 
+        Time Complexity: O(N^2)
+        Space Complexity: O(1) 
+    */
+    // for(int i = 1; i <= n ; i++)
+    // {
+    //     int flag = 0;
+    //     for(int j =0; j < n-1; j++)
+    //     {
+    //         if(arr[j] == i)
+    //         {
+    //             flag = 1;
+    //             break;
+    //         }
+    //     }
+    //     if(flag == 0) return i;
         
+    // }
+    // return -1;   
+
+    /*
+        Optimal Approach 
+        Time Complexity: O(N)
+        Space Complexity: O(1) 
+    */
+    int sum =( n*(n+1))/2;
+    int s2 =0;
+    for(int i = 0; i < n-1; i++)
+    {
+        s2 += arr[i];
     }
-    return -1;   
+    int res = sum - s2;
+    return res;
 }
 
 int main()

@@ -1,1 +1,1 @@
-The missing Value in an array is : 4
+Array After Rotating D places into Left is : 1 2 3 4 -334295968 32766 -239077488 
