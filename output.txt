@@ -1,1 +1,1 @@
-Array After Rotating D places into Left is : 1 2 3 4 -334295968 32766 -239077488 
+The Union of two arrays is : 0 1 2 3 4 5 6 7 14 23 36 78 90 954921550 
