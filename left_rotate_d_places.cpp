@@ -1,27 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void leftRotateDplaces(int arr[],int n)
+void reverse(int arr[], int start,int end)
 {
+  while(start<end)
+  {
+    swap(arr[start],arr[end]);
+    start++;
+    end--;
+  }
+}
+void leftRotateDplaces(int arr[],int n, int k)
+{
+    
     if(n == 0) return;
-    int k = k % n;
+    k = k % n;
     if(k > n) return ;
 
-    int temp[k];
-    for(int i = 0; i < k; i++)
-    {
-        temp[i] = arr[i];
-    }
-
-    for(int i = k; i < n; i++)
-    {
-        arr[n-k] = arr[i];
-    }
-    for(int i = n-k; i < n; i++)
-    {
-        arr[i] = temp[i];
-    }
-
+    reverse(arr,0,k-1);
+    reverse(arr,k,n-1);
+    reverse(arr,0,n-1);
     cout<<"Array After Rotating D places into Left is : ";
     for(int i = 0; i < n; i++)
     {
@@ -39,7 +37,9 @@ int main()
     {
         cin>>arr[i];
     }
-
-    leftRotateDplaces(arr,n);
+    int k;
+    cin>>k;
+    leftRotateDplaces(arr,n,k);
     return 0;
 }
+

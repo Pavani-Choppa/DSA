@@ -9,7 +9,7 @@ vector<int> CalculateUnion(int arr1[], int arr2[], int n, int m)
     {
         s.insert(arr1[i]);
     }
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < m; i++)
     {
         s.insert(arr2[i]);
     }
