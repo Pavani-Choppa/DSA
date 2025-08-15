@@ -30,6 +30,23 @@ int logenstSubarray(int arr[], int n, int k){
         Time Complexity = O(N)
         Space Complexity = O(1)
     */
+
+    int maxLen = 0, sum = 0, left = 0, right = 0;
+    
+    while(right < n){
+        sum += arr[right];
+
+        while(sum > k && left <= right){
+            sum -= arr[left];
+            left++;
+        }
+
+        if(sum == k){
+            maxLen = max(maxLen,right - left +1);
+        }
+        right++;
+    }
+    return maxLen;
 }
 
 int main()
