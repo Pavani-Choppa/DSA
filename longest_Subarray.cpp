@@ -64,6 +64,7 @@ int logenstSubarray(vector<int> &arr, int n, int k){
     //         maxLen = max(maxLen,right - left +1);
     //     }
     //     right++;
+    //     
     // }
     return maxLen;
 }
