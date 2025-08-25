@@ -1,1 +1,1 @@
-0 0 0 1 1 1 2 2 2 
+The Majority element that occured in an array is : 0

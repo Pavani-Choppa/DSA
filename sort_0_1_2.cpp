@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 void SortOf012(int arr[], int n){
+
+    /*
+       Brute force Approach
+        Time Complexity = O(N log N)
+        Space Complexity = O(N)
+    */
+
     // int count0 = 0, count1 = 0, count2 = 0;
 
     // for(int i =0; i < n; i++){
@@ -17,7 +24,11 @@ void SortOf012(int arr[], int n){
     //     cout<<arr[i]<<" ";
     // }
 
-    
+    /*
+       OPTIMAL METHOD 
+        Time Complexity = O(N)
+        Space Complexity = O(1)
+    */
         int low =0, mid =0, high = n-1;
         while(mid <= high){
             if(arr[mid] == 0){
