@@ -1,2 +1,1 @@
-The Maximum Subarray is : -3 -3 -4 -2 10 
-The Maximum Subarray Sum is : 10
+The maximum Profit is : 8
