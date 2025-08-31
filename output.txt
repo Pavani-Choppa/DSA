@@ -1,1 +1,1 @@
-The maximum Profit is : 8
+The rearranges array is : 5 -1 2 -3 -9 -6 
