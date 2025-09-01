@@ -1,1 +1,2 @@
-The rearranges array is : 5 -1 2 -3 -9 -6 
+Original array: 1 2 3 
+Next permutation: 1 3 2 
