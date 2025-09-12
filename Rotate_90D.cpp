@@ -4,7 +4,10 @@ using namespace std;
 
 // return type must be vector<vector<int>>
 vector<vector<int>> RotateArrayBy90(vector<vector<int>> &arr, int n) {
-    /* BRUTEFORCE METHOD*/
+    /* BRUTEFORCE METHOD 
+       TC -----> O(N^2)
+       SC -----> O(N^2)
+    */
     // vector<vector<int>> ans(n, vector<int>(n)); // create n x n matrix
 
     // for (int i = 0; i < n; i++) {
@@ -12,7 +15,20 @@ vector<vector<int>> RotateArrayBy90(vector<vector<int>> &arr, int n) {
     //         ans[j][n - 1 - i] = arr[i][j]; // rotate 90 degrees clockwise
     //     }
     // }
-    return ans;
+
+    /* Optimal Aprroach
+       TC -----> O(N^2)
+       SC -----> O(1)
+    */
+    for(int i = 0; i < n-1; i++){
+        for(int j = i+1; j < n ;j++){
+            swap(arr[i][j],arr[j][i]);
+        }
+    }
+    for(int i = 0; i < n; i++){
+        reverse(arr[i].begin(),arr[i].end());
+    }
+    return arr;
 }
 
 int main() {
