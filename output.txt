@@ -1,1 +1,2 @@
-The SubArray With Subarrays is : 3
+Enter number of intervals: Enter the intervals (start end):
+Merged intervals: {1, 6} {8, 10} {15, 18} 
