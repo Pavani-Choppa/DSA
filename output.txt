@@ -1,1 +1,2 @@
-The Maximum Product Subarray is : 240
+The Repeated Element is : 2
+The Missed Element is : 5
