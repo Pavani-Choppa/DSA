@@ -1,1 +1,1 @@
-Number of reverse pairs: 15
+Element is present at index 2
